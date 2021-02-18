@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HistoryController extends Controller
 {
-    function insert_history(){
+    function insert_elder_history(){
         $validation=request()->validate([
             "patientName"=>"required",
             "age"=>"required",
@@ -177,5 +177,9 @@ class HistoryController extends Controller
         }else{
             return back()->withErrors($validation);
         }
+    }
+
+    function insert_child_history(){
+
     }
 }

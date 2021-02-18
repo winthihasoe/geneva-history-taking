@@ -15,8 +15,12 @@
                     <span class="sr-only">Home</span>
                     </a>
                 </li>
-                <li class="nav-item {{request()->path()==='addhistory' ? 'active' : ''}}">
-                    <a class="nav-link" href="{{route('addhistory')}}">Add History</a>
+                <li class="nav-item {{request()->path()==='add_elder_history' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{route('add_elder_history')}}">Add Elder History</a>
+                </li>
+
+                <li class="nav-item {{request()->path()==='add_child_history' ? 'active' : ''}}">
+                    <a class="nav-link" href="{{route('add_child_history')}}">Add Child History</a>
                 </li>
                 
                 <li class="nav-item {{request()->path()==='patientlist' ? 'active' : ''}}">

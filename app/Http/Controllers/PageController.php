@@ -14,8 +14,12 @@ class PageController extends Controller
         return view('index');
     }
 
-    function addhistory(){
-        return view('addhistory');
+    function add_elder_history(){
+        return view('addElderHistory');
+    }
+    
+    function add_child_history(){
+        return view('addChildHistory');
     }
 
     function patientlist(){

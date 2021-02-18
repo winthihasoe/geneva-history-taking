@@ -102,7 +102,8 @@
                         <td>{{$patient->duty}}</td> 
                       </tr>
                       <tr>
-                        <th colspan="2" class="text-center"><a href="{{route('editHistory',$patient->id)}}" class="btn btn-secondary">Edit History</a></th> 
+                        <th colspan="2" class="text-center"><a href="{{route('editHistory',$patient->id)}}" class="btn btn-sm btn-secondary">Edit History</a><a class="btn btn-danger btn-sm ml-3" href="{{route('patientlist')}}">Back</a></th> 
+                        
                       </tr>
                       
                     </tbody>
