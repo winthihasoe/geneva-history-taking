@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ChildHistory;
 use App\Models\History;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -13,8 +14,9 @@ class AdminController extends Controller
     }
 
     function patientlist(){
-        $patients=History::latest()->get();
-        return view('admin.patientlist',['patients'=>$patients]);
+        $elder_patients=History::latest()->get();
+        $child=ChildHistory::latest()->get();
+        return view('admin.patientlist',['patients'=>$elder_patients,'children'=>$child]);
     }
 
     function singlePatient($id){

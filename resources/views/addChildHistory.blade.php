@@ -32,7 +32,7 @@
                                     @error('birth')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
-                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="LSCS or Normal Labour" name="birth" list="birth" value="{{old('birth')}}">
+                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="LSCS or Normal Labour" name="labour" list="birth" value="{{old('birth')}}">
                                     <datalist id="birth">
                                         <option value="LSCS"></option>
                                         <option value="Normal Labour"></option>
@@ -101,7 +101,7 @@
 
                                     {{-- sleeping --}}
                                     <label class="form-check-label" for="checkbox">Sleeping Pattern</label>
-                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="sleeping" list="sleeping" value="{{old('sleeping')}}">
+                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="sleepPattern" list="sleeping" value="{{old('sleepPattern')}}">
                                     <datalist id="sleeping">
                                         <option value="မရှိသေးပါ။"></option>
                                     </datalist>
@@ -120,23 +120,27 @@
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
 
-                                    {{-- Insulin --}}
-                                    <label class="form-check-label" for="checkbox">Insulin Injection</label>
-                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="insulin" list="insulin" value="{{old('insulin')}}">
-                                    <datalist id="insulin">
-                                        <option value="No"></option>
+                                    {{-- Soothe baby --}}
+                                    <label class="form-check-label" for="checkbox">How to soothe baby</label>
+                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="soothe" list="soothe" value="{{old('soothe')}}">
+                                    <datalist id="soothe">
+                                        <option value="သေချာမသိသေးပါ။"></option>
                                     </datalist>
-                                    @error('insulin')
+                                    @error('soothe')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
 
-                                    {{-- RBS --}}
-                                    <label class="form-check-label" for="checkbox">RBS testing</label>
-                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="rbs" list="rbs" value="{{old('rbs')}}">
-                                    <datalist id="rbs">
+                                    {{-- Infection --}}
+                                    <label class="form-check-label" for="checkbox">Mother or Baby infection?</label>
+                                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="infection" list="infection" value="{{old('infection')}}">
+                                    <datalist id="infection">
                                         <option value="No"></option>
+                                        <option value="HBV"></option>
+                                        <option value="HCV"></option>
+                                        <option value="HIV"></option>
+                                        <option value="TB"></option>
                                     </datalist>
-                                    @error('rbs')
+                                    @error('infection')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                     
@@ -146,6 +150,7 @@
                                     <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="allergy" list="allergy" value="{{old('allergy')}}">
                                     <datalist id="allergy">
                                         <option value="No"></option>
+                                        <option value="သေချာမသိသေးပါ။"></option>
                                     </datalist>
                                     @error('allergy')
                                         <p class="text-danger">{{$message}}</p>

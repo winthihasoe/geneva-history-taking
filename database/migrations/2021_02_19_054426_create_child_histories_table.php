@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistoriesTable extends Migration
+class CreateChildHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,24 +13,23 @@ class CreateHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('histories', function (Blueprint $table) {
+        Schema::create('child_histories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('patientName');
+            $table->string('babyName');
             $table->integer('age');
-            $table->string('disease');
             $table->integer('weight');
+            $table->string('labour');
             $table->string('address');
             $table->string('phone');
             $table->string('homeOrHospital');
             $table->string('medication');
-            $table->string('canula');
-            $table->string('ryleTube');
-            $table->string('catheter');
-            $table->string('suction');
-            $table->string('drip');
-            $table->string('insulin');
-            $table->string('rbs');
+            $table->string('breastfeeding');
+            $table->string('weaning');
+            $table->string('bathing');
+            $table->string('sleepPattern');
+            $table->string('jaundice');
+            $table->string('soothe');
             $table->string('infection');
             $table->string('allergy');
             $table->string('caregiverName');
@@ -51,6 +50,6 @@ class CreateHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('histories');
+        Schema::dropIfExists('child_histories');
     }
 }

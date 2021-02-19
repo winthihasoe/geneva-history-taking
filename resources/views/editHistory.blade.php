@@ -134,6 +134,21 @@
                 @error('rbs')
                     <p class="text-danger">{{$message}}</p>
                 @enderror
+
+                {{-- Infection --}}
+                <label class="form-check-label" for="checkbox">Infection</label>
+                <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Detail" name="infection" list="infection" value="{{old($patient->infection)}}">
+                <datalist id="infection">
+                    <option value="No"></option>
+                    <option value="HBV"></option>
+                    <option value="HCV"></option>
+                    <option value="HIV"></option>
+                    <option value="TB"></option>
+                    <option value="Covid"></option>
+                </datalist>
+                @error('infection')
+                    <p class="text-danger">{{$message}}</p>
+                @enderror
                 
                 
                 {{-- Allergy --}}

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ChildHistory;
 use App\Models\History;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class HistoryController extends Controller
             "drip"=>"required",
             "insulin"=>"required",
             "rbs"=>"required",
+            "infection"=>"required",
             "allergy"=>"required",
             "caregiverName"=>"required",
             "level"=>"required",
@@ -51,6 +53,7 @@ class HistoryController extends Controller
             $drip=request('drip');
             $insulin=request('insulin');
             $rbs=request('rbs');
+            $infection=request('infection');
             $allergy=request('allergy');
             $caregiverName=request('caregiverName');
             $level=request('level');
@@ -77,6 +80,7 @@ class HistoryController extends Controller
             $patient->drip=$drip;
             $patient->insulin=$insulin;
             $patient->rbs=$rbs;
+            $patient->infection=$infection;
             $patient->allergy=$allergy;
             $patient->caregiverName=$caregiverName;
             $patient->level=$level;
@@ -87,7 +91,7 @@ class HistoryController extends Controller
             $patient->duty=$duty;
             $patient->save();
 
-            return redirect()->route('home');
+            return redirect()->route('patientlist');
         }else{
             return back()->withErrors($validation);
         }
@@ -179,7 +183,5 @@ class HistoryController extends Controller
         }
     }
 
-    function insert_child_history(){
-            return "work";
-    }
+    
 }

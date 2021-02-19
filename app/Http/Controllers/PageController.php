@@ -25,6 +25,7 @@ class PageController extends Controller
     function patientlist(){
         $supervisor=auth()->user();
         $supervisor_histories=$supervisor->histories;
+        
         return view('patientlist',['supervisor_histories'=>$supervisor_histories]);
     }
 

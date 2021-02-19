@@ -70,6 +70,10 @@
                         <td>{{$patient->rbs}}</td> 
                       </tr>
                       <tr>
+                        <th>Infection</th>
+                        <td>{{$patient->infection}}</td> 
+                      </tr>
+                      <tr>
                         <th>Allergy</th>
                         <td>{{$patient->allergy}}</td> 
                       </tr>
