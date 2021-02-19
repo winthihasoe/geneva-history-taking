@@ -4,7 +4,7 @@
                     <div class="row justify-content-center">
                     <!-- Child History taking form-->
                         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                            <form class="form-group border border-light p-5 mt-4" action="{{route('insert_history')}}" method="post">
+                            <form class="form-group border border-light p-5 mt-4" action="{{route('insert_child_history')}}" method="post">
                                  @csrf
 
                                     <p class="h4 mb-4 text-center">Child History</p>

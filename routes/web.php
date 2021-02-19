@@ -21,8 +21,9 @@ Route::middleware('auth')->group(function(){
     Route::get('/',[PageController::class,'index'])->name('home');
     Route::get('/home',[PageController::class,'index'])->name('home');
     Route::get('/addelderhistory',[PageController::class,'add_elder_history'])->name('add_elder_history');
-    Route::get('/addchildhistory',[PageController::class,'add_child_history'])->name('add_child_history');
     Route::post('/addelderhistory',[HistoryController::class,'insert_elder_history'])->name('insert_elder_history');
+    Route::get('/addchildhistory',[PageController::class,'add_child_history'])->name('add_child_history');
+    Route::post('/addchildhistory',[HistoryController::class,'insert_child_history'])->name('insert_child_history');
     Route::get('/patientlist',[PageController::class,'patientlist'])->name('patientlist');
     Route::get('/singlepatient/{id}',[PageController::class,'singlePatient'])->name('singlePatient');
     Route::get('/editHistory/{id}',[PageController::class,'editHistory'])->name('editHistory');

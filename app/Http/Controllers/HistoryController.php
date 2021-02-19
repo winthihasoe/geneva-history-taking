@@ -180,6 +180,6 @@ class HistoryController extends Controller
     }
 
     function insert_child_history(){
-
+            return "work";
     }
 }
